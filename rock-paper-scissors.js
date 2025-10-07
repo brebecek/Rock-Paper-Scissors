@@ -19,4 +19,7 @@ function getHumanChoice() {
     return HumanChoice;
 }
 
-console.log(getHumanChoice());
+var humanScore = 0;
+var computerScore = 0;
+console.log(humanScore);
+console.log(computerScore);
