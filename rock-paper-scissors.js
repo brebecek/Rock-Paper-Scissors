@@ -1,41 +1,45 @@
 function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
+    const results = document.querySelector("#results");
+    const roundResults = document.createElement("p");
 
     if (humanChoice === computerChoice) {
-        alert("You tie!");
+        roundResults.textContent = "You tie!";
+        results.appendChild(roundResults);
         }
     
     else if (humanChoice === "rock") {
         if (computerChoice === "scissors") {
-            alert("You win! Rock beats scissors.")
-            humanScore++;
+            roundResults.textContent = "You win! Rock beats scissors.";
+            results.appendChild(roundResults);
+
         }
         else if (computerChoice === "paper") {
-           alert("You lose! Paper beats rock.")
-            computerScore++;
+           roundResults.textContent = "You lose! Paper beats rock.";
+           results.appendChild(roundResults);
         }
     }
 
     else if (humanChoice === "paper"){
         if (computerChoice === "rock"){
-            alert("You win! Paper beats rock.")
-            humanScore++;
-        }
+            roundResults.textContent = "You win! Paper beats rock.";
+            results.appendChild(roundResults);
+                }
         else if (computerChoice === "scissors"){
-            alert("You lose! Scissors beats rock.")
-            computerScore++;
-        }
+            roundResults.textContent = "You lose! Scissors beats paper.";
+            results.appendChild(roundResults);
+                }
     }
 
     else if (humanChoice === "scissors"){
         if (computerChoice === "paper"){
-            alert("You win! Scissors beats paper.")
-            humanScore++;
-        }
+            roundResults.textContent = "You win! Scissors beats paper.";
+            results.appendChild(roundResults);
+                }
         else if (computerChoice === "rock"){
-            alert("You lose! Rock beats scissors.")
-            computerScore++;
-        }
+            roundResults.textContent = "You lose! Rocks beats scissors.";
+            results.appendChild(roundResults);
+                }
     }
 }
 const buttons = document.querySelectorAll("button");
